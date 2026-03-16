@@ -1,9 +1,6 @@
-import { useState } from 'react';
-import { CheckCircle2, Star, PlayCircle, BookOpen, Users, ArrowRight, Gift, Infinity, X, ShieldCheck, HelpCircle, ChevronDown, Quote } from 'lucide-react';
+import { CheckCircle2, Star, PlayCircle, BookOpen, Users, ArrowRight, Gift, Infinity, ShieldCheck, HelpCircle, ChevronDown, Quote } from 'lucide-react';
 
 function App() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
   return (
     <div className="min-h-screen font-sans bg-gray-50 selection:bg-brand-200" style={{ scrollBehavior: 'smooth' }}>
       {/* HEADER / HERO SECTION */}
@@ -144,69 +141,41 @@ function App() {
       <section id="precos" className="py-20 bg-white relative">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Escolha o seu Kit Agora</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Garanta Seu Acesso Agora</h2>
             <p className="text-xl text-gray-500 max-w-2xl mx-auto">Você paga uma única vez e tem acesso a tudo sem mensalidades!</p>
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-8 justify-center items-stretch max-w-4xl mx-auto">
+          <div className="flex justify-center max-w-lg mx-auto">
 
-            {/* KIT BÁSICO */}
-            <div className="flex-1 bg-white border border-gray-200 rounded-3xl p-8 flex flex-col relative z-0 transition-transform hover:shadow-2xl">
-              <h3 className="text-xl font-bold text-gray-500 uppercase tracking-widest mb-2">🔴 Kit Básico</h3>
-              <div className="flex items-baseline gap-2 mb-6">
-                <span className="text-5xl font-extrabold text-gray-900">R$10</span>
-                <span className="text-gray-500 font-medium">,00</span>
-              </div>
-              <ul className="space-y-4 mb-8 flex-1">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0" />
-                  <span className="text-gray-700">Receita detalhada dos Sapatinhos</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0" />
-                  <span className="text-gray-700">Pacote com <strong>200 receitas</strong> variadas de amigurumis e peças infantis</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0" />
-                  <span className="text-gray-700">Conteúdo <strong>extra surpresa</strong>, selecionado para acelerar seu aprendizado</span>
-                </li>
-              </ul>
-              <button
-                onClick={() => setIsModalOpen(true)}
-                className="w-full py-4 px-6 rounded-xl font-bold text-brand-600 bg-brand-50 hover:bg-brand-100 transition-colors border border-brand-200">
-                Garantir Kit Básico
-              </button>
-            </div>
-
-            {/* KIT DIAMANTE (DESTAQUE) */}
-            <div className="flex-[1.2] bg-gradient-to-br from-brand-900 to-brand-700 rounded-3xl p-1 relative z-10 scale-100 lg:scale-105 shadow-2xl shadow-brand-900/40">
+            {/* PACOTE ÚNICO */}
+            <div className="w-full bg-gradient-to-br from-brand-900 to-brand-700 rounded-3xl p-1 relative z-10 shadow-2xl shadow-brand-900/40">
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-yellow-400 text-brand-900 font-bold px-4 py-1 rounded-full text-sm uppercase tracking-wide flex items-center gap-1 shadow-md">
-                <Star className="w-4 h-4 fill-brand-900" /> O Mestre das Alunas
+                <Star className="w-4 h-4 fill-brand-900" /> Ofertão Exclusivo
               </div>
               <div className="bg-brand-900 h-full w-full rounded-[23px] p-8 flex flex-col relative overflow-hidden">
                 <div className="absolute top-0 right-0 p-32 bg-brand-500 blur-[100px] opacity-20 rounded-full"></div>
 
                 <h3 className="text-2xl font-bold text-yellow-300 flex items-center gap-2 mb-2 relative z-10">
-                  💎 Kit Diamante
+                  💎 Pacote Completo
                 </h3>
-                <p className="text-brand-200 text-sm font-semibold mb-4 relative z-10">PROMOÇÃO ESPECIAL TEMPORÁRIA</p>
+                <p className="text-brand-200 text-sm font-semibold mb-4 relative z-10">ACESSO VITALÍCIO A TUDO</p>
                 <div className="flex items-baseline gap-2 mb-1 relative z-10 opacity-70">
-                  <span className="text-2xl text-white line-through decoration-red-500">De R$47,00</span>
+                  <span className="text-2xl text-white line-through decoration-red-500">De R$67,00</span>
                 </div>
                 <div className="flex items-baseline gap-2 mb-8 relative z-10">
                   <span className="text-xl text-yellow-400">Por</span>
-                  <span className="text-6xl font-extrabold text-white">R$17</span>
+                  <span className="text-6xl font-extrabold text-white">R$10</span>
                   <span className="text-yellow-400 font-medium">,00</span>
                 </div>
 
                 <div className="space-y-4 mb-8 flex-1 relative z-10">
                   <p className="text-white font-semibold flex items-center gap-2 pb-2 mb-2 border-b border-white/20">
-                    <Gift className="w-5 h-5 text-yellow-400" /> Tudo do Kit Básico + Extra Exclusivo:
+                    <Gift className="w-5 h-5 text-yellow-400" /> O que você vai receber:
                   </p>
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-6 h-6 text-yellow-400 shrink-0" />
-                      <span className="text-white">Pacote gigante com <strong>2.000 receitas</strong></span>
+                      <span className="text-white">Pacote gigante com <strong>2.000 receitas</strong> de Sapatinhos</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-6 h-6 text-yellow-400 shrink-0" />
@@ -226,8 +195,8 @@ function App() {
                     </li>
                   </ul>
                 </div>
-                <a href="https://pay.lowify.com.br/checkout?product_id=aDFqKl" className="w-full block text-center py-5 px-6 rounded-xl font-bold text-brand-900 bg-yellow-400 hover:bg-yellow-300 transition-all text-lg shadow-lg shadow-yellow-400/20 hover:scale-[1.02] relative z-10">
-                  Quero o Kit Diamante Completo
+                <a href="https://pay.lowify.com.br/checkout?product_id=WQW0Ue" className="w-full block text-center py-5 px-6 rounded-xl font-bold text-brand-900 bg-yellow-400 hover:bg-yellow-300 transition-all text-lg shadow-lg shadow-yellow-400/20 hover:scale-[1.02] relative z-10">
+                  Quero o Pacote Completo
                 </a>
               </div>
             </div>
@@ -265,7 +234,7 @@ function App() {
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900">Márcia Santos</h4>
-                  <p className="text-sm text-gray-500">Aluna do Kit Diamante</p>
+                  <p className="text-sm text-gray-500">Aluna do Pacote Completo</p>
                 </div>
               </div>
             </div>
@@ -403,65 +372,7 @@ function App() {
         </div>
       </footer>
 
-      {/* MODAL UPSELL */}
-      {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 animate-in fade-in duration-300">
-          <div className="bg-white rounded-3xl w-full max-w-lg overflow-hidden shadow-2xl relative animate-in slide-in-from-bottom-10 duration-500">
-            {/* Modal Header */}
-            <div className="bg-gradient-to-r from-red-600 to-red-500 p-6 text-white text-center relative">
-              <button
-                onClick={() => setIsModalOpen(false)}
-                className="absolute top-4 right-4 text-white/80 hover:text-white transition-colors"
-              >
-                <X className="w-6 h-6" />
-              </button>
-              <h3 className="font-extrabold text-2xl mb-2 flex items-center justify-center gap-2">
-                ⚠️ ESPERE! NÃO FECHE!
-              </h3>
-              <p className="text-red-50 font-medium">Você está prestes a perder a melhor oportunidade...</p>
-            </div>
 
-            {/* Modal Content */}
-            <div className="p-8 text-center bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] bg-white">
-              <div className="inline-flex w-20 h-20 bg-yellow-100 rounded-full items-center justify-center mb-6 shadow-inner">
-                <Gift className="w-10 h-10 text-yellow-500" />
-              </div>
-
-              <h4 className="text-xl font-bold text-gray-900 mb-4">
-                Por apenas <span className="text-yellow-500 text-3xl">R$ 7,00</span> a mais...
-              </h4>
-
-              <p className="text-gray-600 mb-6 text-lg">
-                Você pode levar o <strong>Kit Diamante Completo</strong>, que custaria R$47,00. São os mesmos R$10 do plano básico + 7 reais para liberar <strong>ACESSO TOTAL A TUDO!</strong>
-              </p>
-
-              <ul className="text-left bg-gray-50 p-4 rounded-xl space-y-3 mb-8 border border-gray-100 italic">
-                <li className="flex items-center gap-2 text-gray-700">
-                  <CheckCircle2 className="w-5 h-5 text-green-500" /> +2000 Receitas Completas
-                </li>
-                <li className="flex items-center gap-2 text-gray-700">
-                  <CheckCircle2 className="w-5 h-5 text-green-500" /> Moldes bíblicos e Heróis
-                </li>
-                <li className="flex items-center gap-2 text-gray-700">
-                  <CheckCircle2 className="w-5 h-5 text-green-500" /> Roupas, Vestidos e Amigurumis
-                </li>
-              </ul>
-
-              <div className="space-y-3">
-                <a href="https://pay.lowify.com.br/checkout?product_id=aDFqKl" className="w-full py-4 px-6 rounded-xl font-bold text-brand-900 bg-yellow-400 hover:bg-yellow-300 transition-all text-lg shadow-lg shadow-yellow-400/30 flex items-center justify-center gap-2 animate-pulse">
-                  SIM! Quero o Kit Diamante
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://pay.lowify.com.br/checkout?product_id=WQW0Ue"
-                  className="w-full block py-3 px-6 rounded-xl font-medium text-gray-500 hover:text-gray-700 hover:bg-gray-100 transition-colors underline text-sm">
-                  Não, obrigado. Quero continuar apenas com o Kit Básico (R$10)
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
